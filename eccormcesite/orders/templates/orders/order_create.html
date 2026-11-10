@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="showdow-md p-4"> 
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" class="bg-blue-400">Place order</button>
+    </form>
+</div>
+
+{% endblock %}
+
+<style>
+    form p{
+        margin-bottom: 1rem;
+    }
+</style>
